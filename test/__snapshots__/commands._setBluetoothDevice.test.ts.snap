@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`THETA Z1 POST /osc/commands/execute _setBluetoothDevice should respond with results 1`] = `
+{
+  "name": "camera._setBluetoothDevice",
+  "results": {
+    "deviceName": "10100001",
+  },
+  "state": "done",
+}
+`;

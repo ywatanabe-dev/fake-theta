@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POST /osc/commands/execute stopCapture should respond with results 1`] = `
+{
+  "name": "camera.stopCapture",
+  "results": {
+    "fileUrls": [
+      StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
+    ],
+  },
+  "state": "done",
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute stopCapture should respond with results 1`] = `
+{
+  "name": "camera.stopCapture",
+  "results": {
+    "fileUrls": [
+      StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
+    ],
+  },
+  "state": "done",
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute stopCapture should respond with results 1`] = `
+{
+  "name": "camera.stopCapture",
+  "results": {
+    "fileUrls": [
+      StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
+    ],
+  },
+  "state": "done",
+}
+`;

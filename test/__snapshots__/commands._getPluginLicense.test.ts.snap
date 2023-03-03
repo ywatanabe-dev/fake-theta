@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POST /osc/commands/execute _getPluginLicense should respond with results 1`] = `
+"<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <style type="text/css">
+      body {
+        padding: 0;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+    <div>
+      <p>This plug-in does not use open source software.</p>
+    </div>
+  </body>
+</html>
+"
+`;

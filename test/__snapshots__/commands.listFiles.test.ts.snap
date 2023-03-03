@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POST /osc/commands/execute listFiles should respond with results 1`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`POST /osc/commands/execute listFiles should respond with results 2`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`POST /osc/commands/execute listFiles should respond with results 3`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`POST /osc/commands/execute listFiles should respond with results 4`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`POST /osc/commands/execute listFiles should respond with results 5`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`POST /osc/commands/execute listFiles should respond with results 6`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`POST /osc/commands/execute listFiles should respond with results 7`] = `"{"results":{"entries":[],"totalEntries":0},"name":"camera.listFiles","state":"done"}"`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 1`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 2`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 3`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 4`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 5`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 6`] = `
+{
+  "_favorite": Any<Boolean>,
+  "dateTime": Any<String>,
+  "fileUrl": Any<String>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+}
+`;
+
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 7`] = `"{"results":{"entries":[],"totalEntries":0},"name":"camera.listFiles","state":"done"}"`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 1`] = `
+{
+  "_projectionType": Any<String>,
+  "_thumbSize": Any<Number>,
+  "dateTimeZone": Any<String>,
+  "fileUrl": Any<String>,
+  "height": Any<Number>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+  "thumbnail": Any<String>,
+  "width": Any<Number>,
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 2`] = `
+{
+  "_projectionType": Any<String>,
+  "_thumbSize": Any<Number>,
+  "dateTimeZone": Any<String>,
+  "fileUrl": Any<String>,
+  "height": Any<Number>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+  "thumbnail": Any<String>,
+  "width": Any<Number>,
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 3`] = `
+{
+  "_projectionType": Any<String>,
+  "_thumbSize": Any<Number>,
+  "dateTimeZone": Any<String>,
+  "fileUrl": Any<String>,
+  "height": Any<Number>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+  "thumbnail": Any<String>,
+  "width": Any<Number>,
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 4`] = `
+{
+  "_projectionType": Any<String>,
+  "_thumbSize": Any<Number>,
+  "dateTimeZone": Any<String>,
+  "fileUrl": Any<String>,
+  "height": Any<Number>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+  "width": Any<Number>,
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 5`] = `
+{
+  "_projectionType": Any<String>,
+  "_thumbSize": Any<Number>,
+  "dateTimeZone": Any<String>,
+  "fileUrl": Any<String>,
+  "height": Any<Number>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+  "width": Any<Number>,
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 6`] = `
+{
+  "_projectionType": Any<String>,
+  "_thumbSize": Any<Number>,
+  "dateTimeZone": Any<String>,
+  "fileUrl": Any<String>,
+  "height": Any<Number>,
+  "isProcessed": Any<Boolean>,
+  "name": Any<String>,
+  "previewUrl": Any<String>,
+  "size": Any<Number>,
+  "width": Any<Number>,
+}
+`;
+
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 7`] = `"{"results":{"entries":[],"totalEntries":0},"name":"camera.listFiles","state":"done"}"`;
