@@ -1,8 +1,7 @@
 {
   "name": "fake-theta",
-  "version": "0.1.0",
   "private": true,
-  "description": "RICOH THETA Web API simulator.",
+  "description": "RICOH THETA Web API simulator",
   "license": "MIT",
   "scripts": {
     "deploy": "vercel",
