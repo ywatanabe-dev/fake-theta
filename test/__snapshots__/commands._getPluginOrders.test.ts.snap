@@ -1,29 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`POST /osc/commands/execute _getPluginOrders should respond with results 1`] = `
-[
-  "com.example.mytestapplication1",
-  "com.example.mytestapplication2",
-  "com.example.mytestapplication3",
-  "com.example.mytestapplication4",
-  "com.example.mytestapplication5",
-]
+{
+  "name": "camera._getPluginOrders",
+  "results": {
+    "pluginOrders": [
+      "com.example.mytestapplication1",
+      "com.example.mytestapplication2",
+      "com.example.mytestapplication3",
+      "com.example.mytestapplication4",
+      "com.example.mytestapplication5",
+    ],
+  },
+  "state": "done",
+}
 `;
 
 exports[`THETA X POST /osc/commands/execute _getPluginOrders should respond with results 1`] = `
-[
-  "com.example.mytestapplication1",
-  "com.example.mytestapplication2",
-  "com.example.mytestapplication3",
-  "com.example.mytestapplication4",
-  "com.example.mytestapplication5",
-]
+{
+  "name": "camera._getPluginOrders",
+  "results": {
+    "pluginOrders": [
+      "com.example.mytestapplication1",
+      "com.example.mytestapplication2",
+      "com.example.mytestapplication3",
+      "com.example.mytestapplication4",
+      "com.example.mytestapplication5",
+    ],
+  },
+  "state": "done",
+}
 `;
 
 exports[`THETA Z1 /osc/commands/execute _getPluginOrders should respond with results 1`] = `
-[
-  "com.theta.remoteplayback",
-  "com.theta360.remotecontrol",
-  "com.theta360.usbstorage",
-]
+{
+  "name": "camera._getPluginOrders",
+  "results": {
+    "pluginOrders": [
+      "com.theta.remoteplayback",
+      "com.theta360.remotecontrol",
+      "com.theta360.usbstorage",
+    ],
+  },
+  "state": "done",
+}
 `;

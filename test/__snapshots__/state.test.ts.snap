@@ -1,7 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`POST /osc/state should respond with state 1`] = `"{"fingerprint":"FIG_0001","state":{"_apiVersion":2,"_batteryInsert":true,"batteryLevel":0.33,"_batteryState":"disconnect","_cameraError":[],"_captureStatus":"idle","_capturedPictures":0,"_currentMicrophone":"Internal","_currentStorage":"IN","_function":"normal","_latestFileUrl":"http://192.168.1.1/files/100RICOH/R0010015.JPG","_mySettingChanged":false,"_pluginRunning":false,"_pluginWebServer":false,"_recordableTime":0,"_recordedTime":0,"_storageID":"90014a68423861503e030277e0c2b500","storageUri":"http://192.168.1.1/files/"}}"`;
+exports[`POST /osc/state should respond with state 1`] = `
+{
+  "fingerprint": "FIG_0001",
+  "state": {
+    "_apiVersion": 2,
+    "_batteryInsert": true,
+    "_batteryState": "disconnect",
+    "_cameraError": [],
+    "_captureStatus": "idle",
+    "_capturedPictures": 0,
+    "_currentMicrophone": "Internal",
+    "_currentStorage": "IN",
+    "_function": "normal",
+    "_latestFileUrl": "http://192.168.1.1/files/100RICOH/R0010015.JPG",
+    "_mySettingChanged": false,
+    "_pluginRunning": false,
+    "_pluginWebServer": false,
+    "_recordableTime": 0,
+    "_recordedTime": 0,
+    "_storageID": "90014a68423861503e030277e0c2b500",
+    "batteryLevel": 0.33,
+    "storageUri": "http://192.168.1.1/files/",
+  },
+}
+`;
 
-exports[`THETA X POST /osc/state should respond with state 1`] = `"{"fingerprint":"FIG_0001","state":{"_apiVersion":2,"_batteryInsert":true,"batteryLevel":0.33,"_batteryState":"disconnect","_cameraError":[],"_captureStatus":"idle","_capturedPictures":0,"_currentMicrophone":"Internal","_currentStorage":"IN","_function":"normal","_latestFileUrl":"http://192.168.1.1/files/100RICOH/R0010015.JPG","_mySettingChanged":false,"_pluginRunning":false,"_pluginWebServer":false,"_recordableTime":0,"_recordedTime":0,"_storageID":"90014a68423861503e030277e0c2b500","storageUri":"http://192.168.1.1/files/"}}"`;
+exports[`THETA X POST /osc/state should respond with state 1`] = `
+{
+  "fingerprint": "FIG_0001",
+  "state": {
+    "_apiVersion": 2,
+    "_batteryInsert": true,
+    "_batteryState": "disconnect",
+    "_cameraError": [],
+    "_captureStatus": "idle",
+    "_capturedPictures": 0,
+    "_currentMicrophone": "Internal",
+    "_currentStorage": "IN",
+    "_function": "normal",
+    "_latestFileUrl": "http://192.168.1.1/files/100RICOH/R0010015.JPG",
+    "_mySettingChanged": false,
+    "_pluginRunning": false,
+    "_pluginWebServer": false,
+    "_recordableTime": 0,
+    "_recordedTime": 0,
+    "_storageID": "90014a68423861503e030277e0c2b500",
+    "batteryLevel": 0.33,
+    "storageUri": "http://192.168.1.1/files/",
+  },
+}
+`;
 
-exports[`THETA Z1 POST /osc/state should respond with state 1`] = `"{"fingerprint":"FIG_0001","state":{"_apiVersion":2,"batteryLevel":0.33,"_batteryState":"disconnect","_cameraError":[],"_captureStatus":"idle","_capturedPictures":0,"_compositeShootingElapsedTime":0,"_function":"normal","_latestFileUrl":"http://192.168.1.1/files/150100525831424d42075b53ce68c300/100RICOH/R0010015.JPG","_mySettingChanged":false,"_pluginRunning":false,"_pluginWebServer":false,"_recordableTime":0,"_recordedTime":0,"storageUri":"http://192.168.1.1/files/150100525831424d42075b53ce68c300/"}}"`;
+exports[`THETA Z1 POST /osc/state should respond with state 1`] = `
+{
+  "fingerprint": "FIG_0001",
+  "state": {
+    "_apiVersion": 2,
+    "_batteryState": "disconnect",
+    "_cameraError": [],
+    "_captureStatus": "idle",
+    "_capturedPictures": 0,
+    "_compositeShootingElapsedTime": 0,
+    "_function": "normal",
+    "_latestFileUrl": "http://192.168.1.1/files/150100525831424d42075b53ce68c300/100RICOH/R0010015.JPG",
+    "_mySettingChanged": false,
+    "_pluginRunning": false,
+    "_pluginWebServer": false,
+    "_recordableTime": 0,
+    "_recordedTime": 0,
+    "batteryLevel": 0.33,
+    "storageUri": "http://192.168.1.1/files/150100525831424d42075b53ce68c300/",
+  },
+}
+`;

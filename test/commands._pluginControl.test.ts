@@ -13,7 +13,7 @@ describe('POST /osc/commands/execute _pluginControl', () => {
         parameters: { action: 'dummy' },
       })
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {
@@ -38,7 +38,7 @@ describe('THETA X POST /osc/commands/execute _pluginControl', () => {
       })
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {
@@ -64,7 +64,7 @@ describe('THETA Z1 POST /osc/commands/execute _pluginControl', () => {
       })
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {

@@ -1,7 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`POST /osc/commands/execute startCapture should respond with results 1`] = `"{"id":10,"name":"camera.startCapture","state":"done"}"`;
+exports[`POST /osc/commands/execute startCapture should respond with results 1`] = `
+{
+  "id": 10,
+  "name": "camera.startCapture",
+  "state": "done",
+}
+`;
 
-exports[`THETA X POST /osc/commands/execute startCapture should respond with results 1`] = `"{"id":10,"name":"camera.startCapture","state":"done"}"`;
+exports[`THETA X POST /osc/commands/execute startCapture should respond with results 1`] = `
+{
+  "id": 10,
+  "name": "camera.startCapture",
+  "state": "done",
+}
+`;
 
-exports[`THETA Z1 POST /osc/commands/execute startCapture should respond with results 1`] = `"{"name":"camera.startCapture","state":"done"}"`;
+exports[`THETA Z1 POST /osc/commands/execute startCapture should respond with results 1`] = `
+{
+  "name": "camera.startCapture",
+  "state": "done",
+}
+`;

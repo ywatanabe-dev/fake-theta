@@ -6,7 +6,7 @@ describe('POST /osc/commands/execute _listAccessPoints', () => {
       .post('/osc/commands/execute')
       .send({ name: 'camera._listAccessPoints' })
       .expect(200);
-    expect(res.body.results.accessPoints).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 
@@ -17,7 +17,7 @@ describe('THETA X POST /osc/commands/execute _listAccessPoints', () => {
       .send({ name: 'camera._listAccessPoints' })
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.body.results.accessPoints).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 
@@ -28,7 +28,7 @@ describe('THETA Z1 POST /osc/commands/execute _listAccessPoints', () => {
       .send({ name: 'camera._listAccessPoints' })
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.body.results.accessPoints).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 

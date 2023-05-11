@@ -15,7 +15,7 @@ describe('POST /osc/commands/execute delete', () => {
         },
       })
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {

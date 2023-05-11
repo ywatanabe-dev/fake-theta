@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`POST /osc/commands/execute _convertVideoFormats should respond with results 1`] = `"{"id":"10","name":"camera._convertVideoFormats","state":"inProgress"}"`;
+exports[`POST /osc/commands/execute _convertVideoFormats should respond with results 1`] = `
+{
+  "id": "10",
+  "name": "camera._convertVideoFormats",
+  "state": "inProgress",
+}
+`;
 
-exports[`THETA X POST /osc/commands/execute _convertVideoFormats should respond with results 1`] = `"{"id":"10","name":"camera._convertVideoFormats","state":"inProgress"}"`;
+exports[`THETA X POST /osc/commands/execute _convertVideoFormats should respond with results 1`] = `
+{
+  "id": "10",
+  "name": "camera._convertVideoFormats",
+  "state": "inProgress",
+}
+`;
 
-exports[`THETA Z1 POST /osc/commands/execute _convertVideoFormats should respond with results 1`] = `"{"id":"10","name":"camera._convertVideoFormats","progress":{"completion":0},"state":"inProgress"}"`;
+exports[`THETA Z1 POST /osc/commands/execute _convertVideoFormats should respond with results 1`] = `
+{
+  "id": "10",
+  "name": "camera._convertVideoFormats",
+  "progress": {
+    "completion": 0,
+  },
+  "state": "inProgress",
+}
+`;

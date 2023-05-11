@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`POST /osc/checkForUpdates should respond with state 1`] = `"{"stateFingerprint":"FIG_0001","throttleTimeout":1}"`;
+exports[`POST /osc/checkForUpdates should respond with state 1`] = `
+{
+  "stateFingerprint": "FIG_0001",
+  "throttleTimeout": 1,
+}
+`;
 
-exports[`THETA X POST /osc/checkForUpdates should respond with state 1`] = `"{"stateFingerprint":"FIG_0001","throttleTimeout":1}"`;
+exports[`THETA X POST /osc/checkForUpdates should respond with state 1`] = `
+{
+  "stateFingerprint": "FIG_0001",
+  "throttleTimeout": 1,
+}
+`;
 
-exports[`THETA Z1 POST /osc/checkForUpdates should respond with state 1`] = `"{"stateFingerprint":"FIG_0001","throttleTimeout":1}"`;
+exports[`THETA Z1 POST /osc/checkForUpdates should respond with state 1`] = `
+{
+  "stateFingerprint": "FIG_0001",
+  "throttleTimeout": 1,
+}
+`;

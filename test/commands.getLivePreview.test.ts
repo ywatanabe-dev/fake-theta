@@ -1,6 +1,6 @@
 import { request } from './helper';
 
-describe('POST /osc/commands/execute _finishWlan', () => {
+describe('POST /osc/commands/execute getLivePreview', () => {
   it('should respond with results', async () => {
     const res = await request()
       .post('/osc/commands/execute')

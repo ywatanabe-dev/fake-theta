@@ -12,9 +12,11 @@ describe('POST /osc/commands/execute listFiles', () => {
     expect(res.body.results.totalEntries).toEqual(10);
     res.body.results.entries.map((entry: unknown) => {
       expect(entry).toMatchSnapshot({
-        dateTime: expect.any(String),
+        dateTime: expect.stringMatching(
+          /^[0-9]{4}(:[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}/,
+        ),
         _favorite: expect.any(Boolean),
-        fileUrl: expect.any(String),
+        fileUrl: expect.stringMatching(/^(http|https):\/\/.+\/.+\/.+\/.+\.JPG/),
         isProcessed: expect.any(Boolean),
         name: expect.any(String),
         previewUrl: expect.any(String),
@@ -34,7 +36,9 @@ describe('POST /osc/commands/execute listFiles', () => {
     expect(res.body.results.totalEntries).toEqual(10);
     res.body.results.entries.map((entry: unknown) => {
       expect(entry).toMatchSnapshot({
-        dateTime: expect.any(String),
+        dateTime: expect.stringMatching(
+          /^[0-9]{4}(:[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}/,
+        ),
         _favorite: expect.any(Boolean),
         fileUrl: expect.any(String),
         isProcessed: expect.any(Boolean),
@@ -53,7 +57,7 @@ describe('POST /osc/commands/execute listFiles', () => {
         parameters: { fileType: 'video', entryCount: 3, maxThumbSize: 640 },
       })
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {
@@ -78,7 +82,9 @@ describe('THETA X POST /osc/commands/execute listFiles', () => {
     expect(res.body.results.totalEntries).toEqual(10);
     res.body.results.entries.map((entry: unknown) => {
       expect(entry).toMatchSnapshot({
-        dateTime: expect.any(String),
+        dateTime: expect.stringMatching(
+          /^[0-9]{4}(:[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}/,
+        ),
         _favorite: expect.any(Boolean),
         fileUrl: expect.any(String),
         isProcessed: expect.any(Boolean),
@@ -101,7 +107,9 @@ describe('THETA X POST /osc/commands/execute listFiles', () => {
     expect(res.body.results.totalEntries).toEqual(10);
     res.body.results.entries.map((entry: unknown) => {
       expect(entry).toMatchSnapshot({
-        dateTime: expect.any(String),
+        dateTime: expect.stringMatching(
+          /^[0-9]{4}(:[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}/,
+        ),
         _favorite: expect.any(Boolean),
         fileUrl: expect.any(String),
         isProcessed: expect.any(Boolean),
@@ -121,7 +129,7 @@ describe('THETA X POST /osc/commands/execute listFiles', () => {
       })
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {
@@ -147,13 +155,19 @@ describe('THETA Z1 POST /osc/commands/execute listFiles', () => {
     expect(res.body.results.totalEntries).toEqual(10);
     res.body.results.entries.map((entry: unknown) => {
       expect(entry).toMatchSnapshot({
-        dateTimeZone: expect.any(String),
-        fileUrl: expect.any(String),
+        dateTimeZone: expect.stringMatching(
+          /^[0-9]{4}(:[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}[+-][0-9]{2}:[0-9]{2}/,
+        ),
+        fileUrl: expect.stringMatching(
+          /^(http|https):\/\/.+\/.+\/.+\/.+\/.+\.JPG/,
+        ),
         height: expect.any(Number),
         isProcessed: expect.any(Boolean),
         name: expect.any(String),
         previewUrl: expect.any(String),
-        _projectionType: expect.any(String),
+        _projectionType: expect.stringMatching(
+          /^(Equirectangular|Dual-Fisheye)/,
+        ),
         size: expect.any(Number),
         _thumbSize: expect.any(Number),
         thumbnail: expect.any(String),
@@ -174,13 +188,19 @@ describe('THETA Z1 POST /osc/commands/execute listFiles', () => {
     expect(res.body.results.totalEntries).toEqual(10);
     res.body.results.entries.map((entry: unknown) => {
       expect(entry).toMatchSnapshot({
-        dateTimeZone: expect.any(String),
-        fileUrl: expect.any(String),
+        dateTimeZone: expect.stringMatching(
+          /^[0-9]{4}(:[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}[+-][0-9]{2}:[0-9]{2}/,
+        ),
+        fileUrl: expect.stringMatching(
+          /^(http|https):\/\/.+\/.+\/.+\/.+\/.+\.JPG/,
+        ),
         height: expect.any(Number),
         isProcessed: expect.any(Boolean),
         name: expect.any(String),
         previewUrl: expect.any(String),
-        _projectionType: expect.any(String),
+        _projectionType: expect.stringMatching(
+          /^(Equirectangular|Dual-Fisheye)/,
+        ),
         size: expect.any(Number),
         _thumbSize: expect.any(Number),
         width: expect.any(Number),
@@ -197,7 +217,7 @@ describe('THETA Z1 POST /osc/commands/execute listFiles', () => {
       })
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {

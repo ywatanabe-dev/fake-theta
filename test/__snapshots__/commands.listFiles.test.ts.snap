@@ -3,8 +3,8 @@
 exports[`POST /osc/commands/execute listFiles should respond with results 1`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
   "previewUrl": Any<String>,
@@ -15,8 +15,8 @@ exports[`POST /osc/commands/execute listFiles should respond with results 1`] = 
 exports[`POST /osc/commands/execute listFiles should respond with results 2`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
   "previewUrl": Any<String>,
@@ -27,8 +27,8 @@ exports[`POST /osc/commands/execute listFiles should respond with results 2`] = 
 exports[`POST /osc/commands/execute listFiles should respond with results 3`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
   "previewUrl": Any<String>,
@@ -39,7 +39,7 @@ exports[`POST /osc/commands/execute listFiles should respond with results 3`] = 
 exports[`POST /osc/commands/execute listFiles should respond with results 4`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -51,7 +51,7 @@ exports[`POST /osc/commands/execute listFiles should respond with results 4`] = 
 exports[`POST /osc/commands/execute listFiles should respond with results 5`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -63,7 +63,7 @@ exports[`POST /osc/commands/execute listFiles should respond with results 5`] = 
 exports[`POST /osc/commands/execute listFiles should respond with results 6`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -72,12 +72,21 @@ exports[`POST /osc/commands/execute listFiles should respond with results 6`] = 
 }
 `;
 
-exports[`POST /osc/commands/execute listFiles should respond with results 7`] = `"{"results":{"entries":[],"totalEntries":0},"name":"camera.listFiles","state":"done"}"`;
+exports[`POST /osc/commands/execute listFiles should respond with results 7`] = `
+{
+  "name": "camera.listFiles",
+  "results": {
+    "entries": [],
+    "totalEntries": 0,
+  },
+  "state": "done",
+}
+`;
 
 exports[`THETA X POST /osc/commands/execute listFiles should respond with results 1`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -89,7 +98,7 @@ exports[`THETA X POST /osc/commands/execute listFiles should respond with result
 exports[`THETA X POST /osc/commands/execute listFiles should respond with results 2`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -101,7 +110,7 @@ exports[`THETA X POST /osc/commands/execute listFiles should respond with result
 exports[`THETA X POST /osc/commands/execute listFiles should respond with results 3`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -113,7 +122,7 @@ exports[`THETA X POST /osc/commands/execute listFiles should respond with result
 exports[`THETA X POST /osc/commands/execute listFiles should respond with results 4`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -125,7 +134,7 @@ exports[`THETA X POST /osc/commands/execute listFiles should respond with result
 exports[`THETA X POST /osc/commands/execute listFiles should respond with results 5`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -137,7 +146,7 @@ exports[`THETA X POST /osc/commands/execute listFiles should respond with result
 exports[`THETA X POST /osc/commands/execute listFiles should respond with results 6`] = `
 {
   "_favorite": Any<Boolean>,
-  "dateTime": Any<String>,
+  "dateTime": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}/,
   "fileUrl": Any<String>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -146,14 +155,23 @@ exports[`THETA X POST /osc/commands/execute listFiles should respond with result
 }
 `;
 
-exports[`THETA X POST /osc/commands/execute listFiles should respond with results 7`] = `"{"results":{"entries":[],"totalEntries":0},"name":"camera.listFiles","state":"done"}"`;
+exports[`THETA X POST /osc/commands/execute listFiles should respond with results 7`] = `
+{
+  "name": "camera.listFiles",
+  "results": {
+    "entries": [],
+    "totalEntries": 0,
+  },
+  "state": "done",
+}
+`;
 
 exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 1`] = `
 {
-  "_projectionType": Any<String>,
+  "_projectionType": StringMatching /\\^\\(Equirectangular\\|Dual-Fisheye\\)/,
   "_thumbSize": Any<Number>,
-  "dateTimeZone": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTimeZone": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}\\[\\+-\\]\\[0-9\\]\\{2\\}:\\[0-9\\]\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "height": Any<Number>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -166,10 +184,10 @@ exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with resul
 
 exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 2`] = `
 {
-  "_projectionType": Any<String>,
+  "_projectionType": StringMatching /\\^\\(Equirectangular\\|Dual-Fisheye\\)/,
   "_thumbSize": Any<Number>,
-  "dateTimeZone": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTimeZone": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}\\[\\+-\\]\\[0-9\\]\\{2\\}:\\[0-9\\]\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "height": Any<Number>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -182,10 +200,10 @@ exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with resul
 
 exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 3`] = `
 {
-  "_projectionType": Any<String>,
+  "_projectionType": StringMatching /\\^\\(Equirectangular\\|Dual-Fisheye\\)/,
   "_thumbSize": Any<Number>,
-  "dateTimeZone": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTimeZone": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}\\[\\+-\\]\\[0-9\\]\\{2\\}:\\[0-9\\]\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "height": Any<Number>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -198,10 +216,10 @@ exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with resul
 
 exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 4`] = `
 {
-  "_projectionType": Any<String>,
+  "_projectionType": StringMatching /\\^\\(Equirectangular\\|Dual-Fisheye\\)/,
   "_thumbSize": Any<Number>,
-  "dateTimeZone": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTimeZone": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}\\[\\+-\\]\\[0-9\\]\\{2\\}:\\[0-9\\]\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "height": Any<Number>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -213,10 +231,10 @@ exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with resul
 
 exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 5`] = `
 {
-  "_projectionType": Any<String>,
+  "_projectionType": StringMatching /\\^\\(Equirectangular\\|Dual-Fisheye\\)/,
   "_thumbSize": Any<Number>,
-  "dateTimeZone": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTimeZone": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}\\[\\+-\\]\\[0-9\\]\\{2\\}:\\[0-9\\]\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "height": Any<Number>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -228,10 +246,10 @@ exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with resul
 
 exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 6`] = `
 {
-  "_projectionType": Any<String>,
+  "_projectionType": StringMatching /\\^\\(Equirectangular\\|Dual-Fisheye\\)/,
   "_thumbSize": Any<Number>,
-  "dateTimeZone": Any<String>,
-  "fileUrl": Any<String>,
+  "dateTimeZone": StringMatching /\\^\\[0-9\\]\\{4\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\} \\[0-9\\]\\{2\\}\\(:\\[0-9\\]\\{2\\}\\)\\{2\\}\\[\\+-\\]\\[0-9\\]\\{2\\}:\\[0-9\\]\\{2\\}/,
+  "fileUrl": StringMatching /\\^\\(http\\|https\\):\\\\/\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\/\\.\\+\\\\\\.JPG/,
   "height": Any<Number>,
   "isProcessed": Any<Boolean>,
   "name": Any<String>,
@@ -241,4 +259,13 @@ exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with resul
 }
 `;
 
-exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 7`] = `"{"results":{"entries":[],"totalEntries":0},"name":"camera.listFiles","state":"done"}"`;
+exports[`THETA Z1 POST /osc/commands/execute listFiles should respond with results 7`] = `
+{
+  "name": "camera.listFiles",
+  "results": {
+    "entries": [],
+    "totalEntries": 0,
+  },
+  "state": "done",
+}
+`;

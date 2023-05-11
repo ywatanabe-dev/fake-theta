@@ -3,7 +3,7 @@ import { request, toMatchInvalidHeaderParameterError } from './helper';
 describe('GET /osc/info', () => {
   it('should respond with info', async () => {
     const res = await request().get('/osc/info').expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 
@@ -13,7 +13,7 @@ describe('THETA X GET /osc/info', () => {
       .get('/osc/info')
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 
@@ -23,7 +23,7 @@ describe('THETA Z1 GET /osc/info', () => {
       .get('/osc/info')
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 

@@ -8,7 +8,7 @@ describe('POST /osc/commands/execute startCapture', () => {
         name: 'camera.startCapture',
       })
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 
@@ -21,7 +21,7 @@ describe('THETA X POST /osc/commands/execute startCapture', () => {
       })
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 
@@ -34,7 +34,7 @@ describe('THETA Z1 POST /osc/commands/execute startCapture', () => {
       })
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.text).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 });
 

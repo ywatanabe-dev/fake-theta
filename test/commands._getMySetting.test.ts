@@ -13,7 +13,7 @@ describe('POST /osc/commands/execute _getMySetting', () => {
         parameters: { mode: 'image' },
       })
       .expect(200);
-    expect(res.body.results.options).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond with results', async () => {
@@ -24,7 +24,7 @@ describe('POST /osc/commands/execute _getMySetting', () => {
         parameters: { mode: 'video' },
       })
       .expect(200);
-    expect(res.body.results.options).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {
@@ -48,7 +48,7 @@ describe('THETA X POST /osc/commands/execute _getMySetting', () => {
       })
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.body.results.options).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond with results', async () => {
@@ -60,7 +60,7 @@ describe('THETA X POST /osc/commands/execute _getMySetting', () => {
       })
       .set('emulating-theta-model', 'x')
       .expect(200);
-    expect(res.body.results.options).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {
@@ -85,7 +85,7 @@ describe('THETA Z1 POST /osc/commands/execute _getMySetting', () => {
       })
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.body.results.options).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond with results', async () => {
@@ -97,7 +97,7 @@ describe('THETA Z1 POST /osc/commands/execute _getMySetting', () => {
       })
       .set('emulating-theta-model', 'z1')
       .expect(200);
-    expect(res.body.results.options).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot();
   });
 
   it('should respond missingParameterError', async () => {

@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`POST /osc/commands/execute _cancelVideoConvert should respond with results 1`] = `"{"name":"camera._cancelVideoConvert","state":"done"}"`;
+exports[`POST /osc/commands/execute _cancelVideoConvert should respond with results 1`] = `
+{
+  "name": "camera._cancelVideoConvert",
+  "state": "done",
+}
+`;
 
-exports[`THETA X POST /osc/commands/execute _cancelVideoConvert should respond with results 1`] = `"{"name":"camera._cancelVideoConvert","state":"done"}"`;
+exports[`THETA X POST /osc/commands/execute _cancelVideoConvert should respond with results 1`] = `
+{
+  "name": "camera._cancelVideoConvert",
+  "state": "done",
+}
+`;
 
-exports[`THETA Z1 POST /osc/commands/execute _cancelVideoConvert should respond with results 1`] = `"{"name":"camera._cancelVideoConvert","state":"done"}"`;
+exports[`THETA Z1 POST /osc/commands/execute _cancelVideoConvert should respond with results 1`] = `
+{
+  "name": "camera._cancelVideoConvert",
+  "state": "done",
+}
+`;
