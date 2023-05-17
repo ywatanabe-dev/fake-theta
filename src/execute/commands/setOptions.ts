@@ -3,9 +3,23 @@ import {
   invalidHeaderParameterError,
   missingParameterError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
-import { setOptionsResponse } from '../../response/set-options-response';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function setOptions(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -19,5 +33,5 @@ export function setOptions(req: VercelRequest, res: VercelResponse): void {
     return;
   }
 
-  res.status(200).json(setOptionsResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

@@ -1,8 +1,22 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { invalidHeaderParameterError } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { finishWlanResponse } from '../../response/finish-wlan-response';
-import { getModel } from '../../response/models';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function _finishWlan(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -11,5 +25,5 @@ export function _finishWlan(req: VercelRequest, res: VercelResponse): void {
     return;
   }
 
-  res.status(200).json(finishWlanResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

@@ -1,8 +1,23 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { invalidHeaderParameterError } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
-import { startCaptureResponse } from '../../response/start-capture-response';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      id: 10,
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function startCapture(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -12,5 +27,5 @@ export function startCapture(req: VercelRequest, res: VercelResponse): void {
     return;
   }
 
-  res.status(200).json(startCaptureResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

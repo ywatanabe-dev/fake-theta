@@ -3,10 +3,20 @@ import {
   invalidHeaderParameterError,
   missingParameterError,
 } from '../../src/error';
-import { updatesResponse } from '../../src/response/check-for-updates-response';
-import { modelHeader } from '../../src/response/config-headers';
-import { getModel } from '../../src/response/models';
+import { modelHeader } from '../../src/execute/commands/config-headers';
+import { getModel } from '../../src/execute/commands/models';
 import { log } from '../../src/utils/logger';
+
+const response = {
+  x: {
+    stateFingerprint: 'FIG_0001',
+    throttleTimeout: 1,
+  },
+  z1: {
+    stateFingerprint: 'FIG_0001',
+    throttleTimeout: 1,
+  },
+};
 
 export default (req: VercelRequest, res: VercelResponse): void => {
   const model = getModel(req);
@@ -20,6 +30,6 @@ export default (req: VercelRequest, res: VercelResponse): void => {
     return;
   }
 
-  res.status(200).json(updatesResponse[model]);
+  res.status(200).json(response[model]);
   log(req, res);
 };

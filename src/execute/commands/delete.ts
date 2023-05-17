@@ -3,9 +3,23 @@ import {
   invalidHeaderParameterError,
   missingParameterError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { deleteResponse } from '../../response/delete-response';
-import { getModel } from '../../response/models';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function _delete(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -17,5 +31,5 @@ export function _delete(req: VercelRequest, res: VercelResponse): void {
     missingParameterError(req, res);
     return;
   }
-  res.status(200).json(deleteResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

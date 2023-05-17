@@ -3,9 +3,23 @@ import {
   invalidHeaderParameterError,
   missingParameterError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
-import { setPluginOrdersResponse } from '../../response/set-plugin-orders-response';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function _setPluginOrders(
   req: VercelRequest,
@@ -22,5 +36,5 @@ export function _setPluginOrders(
     return;
   }
 
-  res.status(200).json(setPluginOrdersResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

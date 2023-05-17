@@ -1,8 +1,22 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { invalidHeaderParameterError } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
-import { resetResponse } from '../../response/reset-response';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function reset(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -11,5 +25,5 @@ export function reset(req: VercelRequest, res: VercelResponse): void {
     return;
   }
 
-  res.status(200).json(resetResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

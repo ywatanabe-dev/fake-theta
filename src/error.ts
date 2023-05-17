@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { configHeaders } from './response/config-headers';
+import { configHeaders } from './execute/commands/config-headers';
 
 const ERROR_STATE = 'error';
 

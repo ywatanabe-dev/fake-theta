@@ -1,8 +1,22 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { invalidHeaderParameterError } from '../../error';
-import { cancelVideoConvertResponse } from '../../response/cancel-video-convert-response';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function _cancelVideoConvert(
   req: VercelRequest,
@@ -15,5 +29,5 @@ export function _cancelVideoConvert(
     return;
   }
 
-  res.status(200).json(cancelVideoConvertResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

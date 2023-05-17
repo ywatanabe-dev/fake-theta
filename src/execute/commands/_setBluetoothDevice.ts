@@ -4,9 +4,18 @@ import {
   missingParameterError,
   unknownCommandError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
-import { setBluetoothDeviceResponse } from '../../response/set-bluetooth-device-response';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  z1: (name: string) => {
+    return {
+      name,
+      results: { deviceName: '10100001' },
+      state: 'done',
+    };
+  },
+};
 
 export function _setBluetoothDevice(
   req: VercelRequest,
@@ -29,5 +38,5 @@ export function _setBluetoothDevice(
     return;
   }
 
-  res.status(200).json(setBluetoothDeviceResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

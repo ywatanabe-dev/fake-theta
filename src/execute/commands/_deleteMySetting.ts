@@ -3,9 +3,23 @@ import {
   invalidHeaderParameterError,
   missingParameterError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { deleteMySettingResponse } from '../../response/delete-my-setting-response';
-import { getModel } from '../../response/models';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      name,
+      state: 'done',
+    };
+  },
+};
 
 export function _deleteMySetting(
   req: VercelRequest,
@@ -21,5 +35,5 @@ export function _deleteMySetting(
     missingParameterError(req, res);
     return;
   }
-  res.status(200).json(deleteMySettingResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

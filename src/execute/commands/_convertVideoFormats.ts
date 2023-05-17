@@ -3,9 +3,26 @@ import {
   invalidHeaderParameterError,
   missingParameterError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { convertVideoFormatsResponse } from '../../response/convert-video-formats-response';
-import { getModel } from '../../response/models';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (name: string) => {
+    return {
+      id: '10',
+      name,
+      state: 'inProgress',
+    };
+  },
+  z1: (name: string) => {
+    return {
+      id: '10',
+      name,
+      progress: { completion: 0.0 },
+      state: 'inProgress',
+    };
+  },
+};
 
 export function _convertVideoFormats(
   req: VercelRequest,
@@ -37,5 +54,5 @@ export function _convertVideoFormats(
       return;
     }
   }
-  res.status(200).json(convertVideoFormatsResponse[model](`${req.body.name}`));
+  res.status(200).json(response[model](`${req.body.name}`));
 }

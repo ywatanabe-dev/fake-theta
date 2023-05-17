@@ -4,10 +4,30 @@ import {
   invalidParameterNameError,
   missingParameterError,
 } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getOptionsResponse } from '../../response/get-options-response';
-import { getModel } from '../../response/models';
-import { options } from '../../response/options';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+import { options } from './options';
+
+const response = {
+  x: (name: string, options: { [optionName: string]: unknown }) => {
+    return {
+      results: {
+        options,
+      },
+      name,
+      state: 'done',
+    };
+  },
+  z1: (name: string, options: { [optionName: string]: unknown }) => {
+    return {
+      name,
+      results: {
+        options,
+      },
+      state: 'done',
+    };
+  },
+};
 
 export function getOptions(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -33,5 +53,5 @@ export function getOptions(req: VercelRequest, res: VercelResponse): void {
     }
   }
 
-  res.status(200).json(getOptionsResponse[model](`${req.body.name}`, output));
+  res.status(200).json(response[model](`${req.body.name}`, output));
 }

@@ -1,8 +1,30 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { invalidHeaderParameterError } from '../../error';
-import { modelHeader } from '../../response/config-headers';
-import { getModel } from '../../response/models';
-import { stopCaptureResponse } from '../../response/stop-capture-response';
+import { modelHeader } from './config-headers';
+import { getModel } from './models';
+
+const response = {
+  x: (proto: string, host: string, name: string) => {
+    return {
+      results: {
+        fileUrls: [`${proto}://${host}/files/100RICOH/R0010015.JPG`],
+      },
+      name,
+      state: 'done',
+    };
+  },
+  z1: (proto: string, host: string, name: string) => {
+    return {
+      name,
+      results: {
+        fileUrls: [
+          `${proto}://${host}/files/150100525831424d42075b53ce68c300/100RICOH/R0010015.JPG`,
+        ],
+      },
+      state: 'done',
+    };
+  },
+};
 
 export function stopCapture(req: VercelRequest, res: VercelResponse): void {
   const model = getModel(req);
@@ -16,7 +38,5 @@ export function stopCapture(req: VercelRequest, res: VercelResponse): void {
 
   res
     .status(200)
-    .json(
-      stopCaptureResponse[model](`${proto}`, `${host}`, `${req.body.name}`),
-    );
+    .json(response[model](`${proto}`, `${host}`, `${req.body.name}`));
 }
