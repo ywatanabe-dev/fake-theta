@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/files/:uuid/:dir/:file",
-      "destination": "/api/files/[uuid]/[dir]/[file]"
+      "destination": "/api/files"
+    },
+    {
+      "source": "/files/:dir/:file",
+      "destination": "/api/files"
     },
     { "source": "/:path*", "destination": "/api/:path*" },
     { "source": "/(.*)", "destination": "/api/404" }
