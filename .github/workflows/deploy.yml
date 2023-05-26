@@ -1,0 +1,9 @@
+on:
+  deployment_status
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: TEST_HOST=${{ github.event.deployment_status.target_url }} yarn test
